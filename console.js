@@ -75,9 +75,7 @@ var Console = (function () {
 
   self.set_log_sink = function(fn_log_sink_handler) {
     if (typeof fn_log_sink_handler != "function") {
-      throw new Error(
-        "Expected log sink argument to be a function"
-      );
+      throw new Error("Invalid function");
     } else {
       self._log_sink = fn_log_sink_handler;
     }
